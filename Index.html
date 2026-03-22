@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreatosTek | Expert Dev & IA Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030508; color: #e2e8f0; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .gradient-text { background: linear-gradient(135deg, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-8px); border-color: #3b82f6; box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        input, select, textarea { background: rgba(255, 255, 255, 0.03) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; }
+        input:focus { border-color: #3b82f6 !important; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-4 md:px-8 py-6">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 group cursor-pointer">
+                <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="url(#grad)" stroke-width="8"/>
+                    <path d="M35 35L65 65M65 35L35 65" stroke="url(#grad)" stroke-width="10" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="text-xl font-extrabold tracking-tighter gradient-text">CreatosTek</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#about" class="hover:text-blue-400 transition">Profil</a>
+                <a href="#services" class="hover:text-blue-400 transition">Expertise</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition">Projets</a>
+                <a href="#contact" class="bg-white text-black px-4 py-2 rounded-full hover:bg-blue-500 hover:text-white transition">Start</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -z-10 animate-pulse" style="animation-delay: 2s"></div>
+        
+        <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tight">
+            Design <span class="text-white">&</span> Code <br>
+            <span class="gradient-text italic">Intelligent</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl text-lg mb-10 leading-relaxed">
+            Propulser les idées vers la réalité numérique grâce à l'Intelligence Artificielle et une architecture système robuste.
+        </p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <a href="#portfolio" class="px-8 py-4 bg-blue-600 rounded-full font-bold shadow-lg shadow-blue-600/20 hover:scale-105 transition">Voir les travaux</a>
+            <a href="#contact" class="px-8 py-4 glass rounded-full font-bold hover:bg-white/5 transition">Me contacter</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="glass p-10 md:p-16 rounded-[50px] grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-blue-500 font-bold mb-4 uppercase tracking-widest text-sm">L'Esprit CreatosTek</h2>
+                <h3 class="text-4xl font-bold mb-6">Expertise en Fusion Technologique.</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Je combine la rigueur mathématique des algorithmes IA avec une sensibilité visuelle unique. Chaque pixel et chaque ligne de code sont optimisés pour la performance.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div><p class="text-3xl font-bold">100%</p><p class="text-xs text-gray-500 uppercase">Qualité Design</p></div>
+                    <div><p class="text-3xl font-bold">Natif</p><p class="text-xs text-gray-500 uppercase">Dev Mobile</p></div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="p-4 glass rounded-2xl flex items-center space-x-4 border-l-4 border-blue-500">
+                    <span class="text-blue-500 font-bold italic">IA</span>
+                    <span class="text-sm font-semibold">Clustering & Extraction de Données</span>
+                </div>
+                <div class="p-4 glass rounded-2xl flex items-center space-x-4 border-l-4 border-purple-500">
+                    <span class="text-purple-500 font-bold italic">UX</span>
+                    <span class="text-sm font-semibold">Interfaces High-Fidelity (4K Ready)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass p-8 rounded-3xl card-hover">
+                <div class="text-3xl mb-4">🌐</div>
+                <h3 class="font-bold mb-2">Web Architecture</h3>
+                <p class="text-xs text-gray-500">Applications Web réactives et SEO-Ready.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl card-hover">
+                <div class="text-3xl mb-4">📱</div>
+                <h3 class="font-bold mb-2">Mobile Native</h3>
+                <p class="text-xs text-gray-500">Expériences fluides sur iOS et Android.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl card-hover">
+                <div class="text-3xl mb-4">⚙️</div>
+                <h3 class="font-bold mb-2">System Design</h3>
+                <p class="text-xs text-gray-500">Modules backend et intégrations API complexes.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl card-hover">
+                <div class="text-3xl mb-4">🤖</div>
+                <h3 class="font-bold mb-2">IA Solutions</h3>
+                <p class="text-xs text-gray-500">Implémentation d'outils intelligents sur mesure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-center text-3xl font-bold mb-16 uppercase tracking-tighter italic">Laboratoire de <span class="gradient-text">Projets</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="group relative overflow-hidden rounded-[40px] glass h-[400px] cursor-pointer transition-all duration-700" id="color-ai-trigger">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 group-hover:scale-110 transition duration-700"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-10 bg-gradient-to-t from-black via-transparent to-transparent">
+                    <span class="text-xs font-bold text-blue-400 mb-2 uppercase">Intelligence Artificielle</span>
+                    <h4 class="text-3xl font-extrabold mb-2">ColorAI Vision</h4>
+                    <p class="text-gray-400 text-sm">Extracteur de palettes professionnelles via Clustering IA.</p>
+                    <div class="mt-4 flex space-x-2">
+                        <span class="px-3 py-1 bg-white/10 rounded-full text-[10px] font-bold">PYTHON</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full text-[10px] font-bold">K-MEANS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-[40px] glass h-[400px]">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:scale-110 transition duration-700"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-10 bg-gradient-to-t from-black via-transparent to-transparent">
+                    <span class="text-xs font-bold text-purple-400 mb-2 uppercase">Mobile Architecture</span>
+                    <h4 class="text-3xl font-extrabold mb-2">Nova Mobile App</h4>
+                    <p class="text-gray-400 text-sm">Système de gestion en temps réel ultra-rapide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="glass p-8 md:p-12 rounded-[50px] border border-blue-500/20 shadow-2xl shadow-blue-500/5">
+            <h2 class="text-3xl font-bold mb-8 text-center">Parlons de votre <span class="gradient-text italic">Vision</span></h2>
+            <form id="contact-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Nom" class="w-full rounded-2xl px-6 py-4 focus:outline-none text-white">
+                    <input type="email" placeholder="Email" class="w-full rounded-2xl px-6 py-4 focus:outline-none text-white">
+                </div>
+                <textarea rows="4" placeholder="Votre projet en quelques mots..." class="w-full rounded-2xl px-6 py-4 focus:outline-none text-white"></textarea>
+                <button type="submit" class="w-full py-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl font-extrabold uppercase tracking-widest hover:scale-[1.02] transition duration-300">
+                    Envoyer le Signal ⚡
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-xs text-gray-600 uppercase tracking-widest">
+        &copy; 2026 CreatosTek // Built with Passion and AI.
+    </footer>
+
+    <script>
+        // LIEN COLOR AI
+        document.getElementById('color-ai-trigger').addEventListener('click', () => {
+            window.open('https://creatostek-ai.streamlit.app/', '_blank');
+        });
+
+        // EFFET SCROLL REVEAL
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('opacity-100', 'translate-y-0');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(section);
+        });
+
+        // FORMULAIRE
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Signal reçu ! CreatosTek vous recontactera bientôt. (Simulation)");
+        });
+    </script>
+</body>
+</html>
