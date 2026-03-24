@@ -62,6 +62,7 @@ function startPayment() {
     alert("Redirection vers la passerelle sécurisée Stripe/PayPal en cours...\n(Ceci est la version de test pour CreatosTek)");
 }
 </script>
+
 <html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -223,28 +224,60 @@ function startPayment() {
     </footer>
 
     <script>
-        // LIEN COLOR AI
-        document.getElementById('color-ai-trigger').addEventListener('click', () => {
+    // 1. GESTION DE LA FENÊTRE DE PAIEMENT (Nouveau pour la vente)
+    function openPayment(name, price) {
+        const modal = document.getElementById('paymentModal');
+        const pName = document.getElementById('productName');
+        const pPrice = document.getElementById('productPrice');
+        if(modal && pName && pPrice) {
+            pName.innerText = name;
+            pPrice.innerText = price;
+            modal.classList.remove('hidden');
+        }
+    }
+
+    function closePayment() {
+        const modal = document.getElementById('paymentModal');
+        if(modal) modal.classList.add('hidden');
+    }
+
+    // Fermer si on clique sur le flou en arrière-plan
+    window.onclick = function(event) {
+        const modal = document.getElementById('paymentModal');
+        if (event.target == modal) closePayment();
+    }
+
+    // 2. LIEN COLOR AI (Ton app Streamlit)
+    const colorTrigger = document.getElementById('color-ai-trigger');
+    if(colorTrigger) {
+        colorTrigger.addEventListener('click', () => {
             window.open('https://creatostek-ai.streamlit.app/', '_blank');
         });
+    }
 
-        // EFFET SCROLL REVEAL
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('opacity-100', 'translate-y-0');
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
-            observer.observe(section);
+    // 3. EFFET SCROLL REVEAL (Ton effet de fondu)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+            }
         });
+    }, { threshold: 0.1 });
 
-        // FORMULAIRE
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+        observer.observe(section);
+    });
+
+    // 4. FORMULAIRE DE CONTACT
+    const contactForm = document.getElementById('contact-form');
+    if(contactForm) {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert("Signal reçu ! CreatosTek vous recontactera bientôt. (Simulation)");
+            alert("Signal reçu ! CreatosTek vous recontactera bientôt.");
         });
-    </script>
+    }
+</script>
 </body>
 </html>
